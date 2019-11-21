@@ -16,6 +16,7 @@
 |gruopname|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
+- has_many :chats
 - has_many :groups_users
 - has_many :users through: :groups_users
 
