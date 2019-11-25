@@ -1,4 +1,4 @@
-#　CHAT-SPACE設計
+# CHAT-SPACE設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
