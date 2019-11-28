@@ -1,46 +1,62 @@
-.headerleft {
+.headerlefts {
   position:fixed;
+  top: 25px;
   height: 100px;
   width: 300px;
   background-color: #253141f8;
 
-    display: flex;
-    justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 
-  &__logo {
+    .headerleft__name {
     color: white;
     font-weight: bold;
     text-align: center;
     line-height: 100px;
     margin-left: 20px;
-  }
+    margin-right:190px;
+    float: left;
+    }
+    
+    .headerleft__lists {
 
-    &__btn {
-      text-align: center;
-      line-height: 100px;
-      &--icon1{
-        color: white;
-        margin-right: 5px;
-      }
-      &--icon2{
-        color: white;
-        margin-right: 20px;
-      }       
-  }
+      // position: absolute;
+      // top: 0;
+
+      display: flex;
+
+      .lists {
+        text-align: center;
+        line-height: 100px;
+
+
+        .icon1 {
+          color: white;
+          // margin-left: 245px
+        }
+        .icon2 {
+          color: white;
+          margin-left: 5px;
+        }  
+      }        
+    }
 }
 
-.contentsleft {
-  display: flex;
+.contentslefts {
+  float: left;
+  margin-top: 25px;
+  // display: flex;
   height: 100vh;
   width: 300px;
   background-color: #2f3e51;
 
-  &__group {
-    margin:120px 0px 0px 20px;
-    color: white;
-  }
+    .contentsleft__name {
+      margin:120px 0px 0px 20px;
+      color: white;
+    }
     
-    &__chat {
+    .contentsleft__message {
+      // margin:0px 0px 0px 20px;
       text-align: center;
       line-height: 28px;
       font-size: 11px;
@@ -49,13 +65,14 @@
 }
 
 .main {
-  position: absolute;
   top: 0;
   width: 100%;
+  margin-top: 30px;
+  float: none;
   
   .headerright {
     position:fixed;
-    height: 100px;
+    height: 93px;
     width: 100%;
     margin-left: 300px;
     border-bottom: 1px solid #eeeeee;
@@ -72,7 +89,7 @@
     &__logo2 {
       color: #999999;
       text-decoration: none;
-      padding-top: 15px;
+      padding-top: 10px;
       margin-left: 40px;
       font-size: 12px;
       }
@@ -89,9 +106,10 @@
   }
 
   .contentsright {
-    height: calc(100vh - 110px);
-    margin:20px 0px 0px 300px;
+    height: calc(100vh - 65px);
+    margin:4px 0px 0px 300px;
     background-color: #fafafa;
+    // overflow: scroll;
 
     &__name {
       float: left;
@@ -103,7 +121,6 @@
       }
 
     &__date {
-      float: left;
       font-weight: normal;
       padding-top: 126px;
       margin-left: 10px;
@@ -113,17 +130,14 @@
       }
 
     &__message {
-      content: "";
-      clear: both;
-      display: block;
       padding-top: 10px;
       margin-left: 40px;
       color:#2f3e51;
+      font-size: 14px;
       text-decoration: none;
       }
     }
   .contentsbottom {
-
     height: 90px;
     margin-left: 300px;  
     background-color: #ddd;
@@ -135,7 +149,7 @@
 
     &__text {
       padding:20px 0px 0px 40px;
-      width: 100%;
+      width: 150vh;
       height:50px;
       position: relative;
       display: flex;
@@ -143,15 +157,17 @@
     }
 
       .input-box__text {
-        padding:0px 686px 0px 10px;
+        padding-left: 10px;
+        width: 100%;
         line-height: 50px;
         border-style: none;
       }
 
         .input-box__image {
           color: black;
-          padding:13px 20px 13px 20px;
+          padding:10px 20px 16px 20px;
           background-color: #ffffff;
+          font-size: 22px;
         }       
   
         .input-box__image__file {
