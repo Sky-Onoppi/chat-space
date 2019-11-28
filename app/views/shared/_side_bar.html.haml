@@ -13,10 +13,10 @@
 .contentslefts
   - current_user.groups.each do |group|
     .contentsleft
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         .contentsleft__name
           = group.name
         .contentsleft__message
-          メッセージはまだありません。
+          = group.show_last_message
 
 

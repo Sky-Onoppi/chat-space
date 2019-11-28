@@ -1,23 +1,31 @@
 .main
   .headerright
     .headerright__logo1
-      Okan
+      = @group.name
     .headerright__logo2
-      Member：asuka aaa Omame
+      Menber : 
+      - @group.users.each do |user|
+        = user.name
     .headerright__logo3
-      Edit
+      = link_to edit_group_path(@group.id) do
+        = "Edit"
   .contentsright
-    .contentsright__name
-      Omame
-    .contentsright__date
-      2019/11/24(Sun) 21:27:10
-    .contentsright__message
-      Penguin!
-  .contentsbottom 
-    .contentsbottom__text  
-      <input placeholder="type a message" class="input-box__text" type="text" name="message[content]" id="message_content">
-      <label class="input-box__image" for="message_image"><i class="fa fa-image"></i>
-      <input class="input-box__image__file" type="file" name="message[image]" id="message_image">
-      </label>
-    .contentsbottom__label
-      <input type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send">
+    = render @messages
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+  -# .contentsbottom 
+  -#   .contentsbottom__text  
+  -#     <input placeholder="type a message" class="input-box__text" type="text" name="message[content]" id="message_content">
+  -#     <label class="input-box__image" for="message_image"><i class="fa fa-image"></i>
+  -#     <input class="input-box__image__file" type="file" name="message[image]" id="message_image">
+  -#     </label>
+  -#   .contentsbottom__label
+  -#     <input type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send">
