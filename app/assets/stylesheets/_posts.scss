@@ -5,8 +5,8 @@
   width: 300px;
   background-color: #253141f8;
 
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 
     .headerleft__name {
     color: white;
@@ -14,12 +14,14 @@
     text-align: center;
     line-height: 100px;
     margin-left: 20px;
+    margin-right:190px;
+    float: left;
     }
     
     .headerleft__lists {
 
-      position: absolute;
-      top: 0;
+      // position: absolute;
+      // top: 0;
 
       display: flex;
 
@@ -27,9 +29,10 @@
         text-align: center;
         line-height: 100px;
 
+
         .icon1 {
           color: white;
-          margin-left: 245px
+          // margin-left: 245px
         }
         .icon2 {
           color: white;
@@ -42,7 +45,7 @@
 .contentslefts {
   float: left;
   margin-top: 25px;
-  display: flex;
+  // display: flex;
   height: 100vh;
   width: 300px;
   background-color: #2f3e51;
@@ -53,7 +56,7 @@
     }
     
     .contentsleft__message {
-      margin:0px 0px 0px 20px;
+      // margin:0px 0px 0px 20px;
       text-align: center;
       line-height: 28px;
       font-size: 11px;
@@ -106,6 +109,7 @@
     height: calc(100vh - 65px);
     margin:4px 0px 0px 300px;
     background-color: #fafafa;
+    // overflow: scroll;
 
     &__name {
       float: left;
