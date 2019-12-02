@@ -1,14 +1,17 @@
-.main
-  .headerright
-    .headerright__logo1
-      = @group.name
-    .headerright__logo2
-      Menber : 
-      - @group.users.each do |user|
-        = user.name
-    .headerright__logo3
-      = link_to edit_group_path(@group.id) do
-        = "Edit"
+.chat
+  .header
+    .left-header
+      .left-header__title
+        = @group.name
+      .left-header__members
+        Menber : 
+        - @group.users.each do |user|
+          = user.name
+    .right-header
+      .right-header__button
+        = link_to edit_group_path(@group.id) do
+          = "Edit"
+          
   .contentsright
     = render @messages
 
