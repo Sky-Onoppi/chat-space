@@ -39,7 +39,6 @@ $(function(){
       $('.contentsright').append(html);
       $('.contentsright').animate({ scrollTop: $('.contentsright')[0].scrollHeight});
       $('form')[0].reset();
-      $('#message_content').val(''); 
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');

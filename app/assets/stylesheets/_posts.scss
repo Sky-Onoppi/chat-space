@@ -15,17 +15,14 @@
     &__name {
       display: inline-block;
       font-weight: bold;
-      // text-decoration: none;
     }
     &__lists {
       display: inline-block;
-      // float: right;
       .list {
         display: inline-block;
       }
       .icon {
         color: white;
-        // font-size: side_header_font;
       }
     }
   }
@@ -55,10 +52,8 @@
   width: calc(100% - 300px);
   float: right;
   .header {
-    // position:fixed;
     box-sizing: border-box;
     height: 100px;
-    // width: calc(100% - 300px);
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -69,8 +64,6 @@
         margin-top: 35px;
       }
       &__members {
-        // display: flex;
-        // @include flexbox;
         color: #999999;
         font-size: 12px;
         margin-top: 15px;
@@ -82,7 +75,6 @@
     }
     .right-header {
       border: 1px solid #38aef0;
-      // color: #38aef0;
       float: right;
       height: 40px;
       line-height: 40px;
@@ -96,7 +88,6 @@
   }
 
   .contentsright {
-    // margin-top: 100px;
     overflow: scroll;
     height: calc(100vh - 190px);
     background-color: #FAFAFA;
@@ -104,7 +95,6 @@
       background-color: #FAFAFA;
       box-sizing: border-box;
       padding: 46px 40px 0;
-      // height: calc(100% - 100px - 90px);
       .upper-message {
         display: flex;
         &__user-name {
@@ -123,7 +113,6 @@
         &__content {
           color: #434a54;
           font-size: 14px;
-          // margin-bottom: 40px;
         }
       }
     }
@@ -161,7 +150,6 @@
       float: right;
       font-size: 16px;
       height: 50px;
-      // margin-left: 15px;
       padding: 0 30px;
     }
   }
