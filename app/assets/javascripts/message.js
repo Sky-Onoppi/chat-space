@@ -1,23 +1,22 @@
 $(function(){
-
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message" data-id="${message.id}">
-                  <div class="message__detail">
-                    <p class="message__detail__current-user-name">
+    var html = `<div class="message" data-message-id="${message.id}">
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">
                       ${message.user_name}
-                    </p>
-                    <p class="message__detail__date">
-                      ${message.date}
-                    </p>
-                  </div>
-                  <p class="message_body">
-                    <div>
-                    ${content}
                     </div>
+                    <div class="upper-message__date">
+                      ${message.created_at}
+                    </div>
+                  </div>
+                  <div class="lower-message">
+                    <p class="lower-message__content">
+                      ${content}
+                    </p>
                     ${img}
-                  </p>
+                  </div>
                 </div>`
   return html;
   }
@@ -47,4 +46,29 @@ $(function(){
       $('.form__submit').prop('disabled', false);
     })
   })
-})
+
+  var reloadMessages = function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      last_message_id = $('.message:last').data("message-id");
+      $.ajax({
+        url: "api/messages",
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.contentsright').append(insertHTML);  
+        $('.contentsright').animate({scrollTop: $('.contentsright')[0].scrollHeight}, 'fast');    
+      })
+      
+      .fail(function() {
+        alert('自動更新に失敗しました');
+      });
+    };
+  };
+  setInterval(reloadMessages, 7000);
+});
