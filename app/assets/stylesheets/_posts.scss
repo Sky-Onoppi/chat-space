@@ -90,10 +90,11 @@
     overflow: scroll;
     height: calc(100vh - 190px);
     background-color: #FAFAFA;
+    padding: 0 40px;
     .message {
       background-color: #FAFAFA;
       box-sizing: border-box;
-      padding: 46px 40px 0;
+      padding: 46px 0 0 0;
       .upper-message {
         display: flex;
         &__user-name {
