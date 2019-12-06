@@ -20,10 +20,10 @@ default: &default
 development:
   <<: *default
   database: chat-space_development
-#   username: root
-#   password: <%= ENV['DATABASE_PASSWORD'] %>
-#  # socket: に続く部分を先ほど調べたパスに置き換える 
-#   socket: /var/lib/mysql/mysql.sock
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+ # socket: に続く部分を先ほど調べたパスに置き換える 
+  socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
